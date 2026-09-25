@@ -3,90 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KeepBack — Privacy Policy & Terms</title>
+  <title>KeepBack – Privacy Policy & Terms of Use</title>
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      line-height: 1.6;
-      color: #222;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.7;
     }
-    h1, h2 { color: #111; }
-    h1 { margin-bottom: 8px; }
-    .updated { color: #666; margin-bottom: 40px; }
-    section { margin-bottom: 45px; }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    header .logo {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, #1e47b8, #0d2e8c);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 20px; font-weight: 800;
+    }
+    header h1 { font-size: 20px; font-weight: 700; color: #1d1d1f; }
+    header p { font-size: 13px; color: #6e6e73; }
+    .container {
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 24px 80px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 36px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1d1d1f;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    h3 { font-size: 15px; font-weight: 600; margin: 20px 0 6px; color: #1d1d1f; }
+    p { font-size: 15px; color: #3a3a3c; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 15px; color: #3a3a3c; margin-bottom: 6px; }
+    .chip {
+      display: inline-block;
+      background: #e8f0fe;
+      color: #1e47b8;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .updated {
+      font-size: 13px;
+      color: #6e6e73;
+      margin-bottom: 0;
+    }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #aeaeb2;
+      padding: 32px 0;
+    }
   </style>
 </head>
 <body>
 
-<h1>KeepBack</h1>
-<p class="updated">Privacy Policy and Terms of Use<br>Last updated: September 24, 2026</p>
+<header>
+  <div class="logo">K</div>
+  <div>
+    <h1>KeepBack</h1>
+    <p>Purchase Protection App</p>
+  </div>
+</header>
 
-<section>
-<h2>Privacy Policy</h2>
+<div class="container">
 
-<p>KeepBack helps users track purchases, return deadlines, warranties, and related purchase information.</p>
+  <div class="card">
+    <span class="chip">Privacy Policy</span>
+    <h2>Privacy Policy</h2>
+    <p class="updated">Last updated: September 2026</p>
 
-<h3>Information We Access</h3>
-<p>If you choose to connect Gmail, KeepBack requests read-only access to Gmail to identify purchase-related emails and extract purchase information such as merchant, order number, purchase amount, purchase date, return information, and warranty information.</p>
+    <h3>Overview</h3>
+    <p>KeepBack is designed with privacy as a core principle. Your data stays on your device. We do not operate any servers, collect any analytics, or store any of your personal information.</p>
 
-<h3>Email Content</h3>
-<p>Gmail messages are fetched and processed on your device. KeepBack does not store complete email bodies or HTML content after processing. Only information extracted for your purchase records is retained.</p>
+    <h3>Data We Access</h3>
+    <p>When you connect Gmail, KeepBack requests read-only access to your Gmail account solely to identify purchase confirmation emails. We use this access to extract:</p>
+    <ul>
+      <li>Merchant name and order details</li>
+      <li>Purchase amount and date</li>
+      <li>Return window information</li>
+      <li>Warranty information</li>
+    </ul>
 
-<h3>Information Stored</h3>
-<p>Purchase information may be stored locally on your device, including product name, merchant, price, purchase date, return deadline, warranty expiration, order number, selected email message identifier, and limited purchase-related notes.</p>
+    <h3>Data We Do Not Collect</h3>
+    <ul>
+      <li>We do not store your email bodies or content</li>
+      <li>We do not transmit your purchase data to any server</li>
+      <li>We do not share your data with any third parties</li>
+      <li>We do not use analytics or tracking SDKs</li>
+    </ul>
 
-<h3>Where Your Data Goes</h3>
-<p>KeepBack does not operate a server or external database for your purchase information. Purchase data is stored locally on your device. Gmail authentication and Gmail data access are handled through Google's services.</p>
+    <h3>Where Your Data Lives</h3>
+    <p>All purchase records are stored locally on your device using Apple's SwiftData framework. Your Gmail OAuth tokens are stored in the iOS Keychain. Nothing is synced to iCloud or any external database.</p>
 
-<h3>Gmail Access</h3>
-<p>KeepBack uses Gmail's APIs only when you choose to connect your Gmail account. Gmail access is read-only and is used to identify and process purchase-related messages.</p>
+    <h3>Gmail Access</h3>
+    <p>KeepBack uses Google's Gmail API with read-only scope. We never read, store, or transmit the contents of your emails beyond what is needed to identify purchase details in the moment of import. You can revoke access at any time from the app or from your Google Account settings.</p>
 
-<h3>Authentication Information</h3>
-<p>Gmail authentication credentials and tokens are stored using Apple's Keychain services on your device. KeepBack does not receive or store your Google password.</p>
+    <h3>Subscriptions</h3>
+    <p>KeepBack Pro subscriptions are processed entirely by Apple via the App Store. KeepBack never receives or stores your payment information.</p>
 
-<h3>Payments</h3>
-<p>Subscriptions and purchases are processed through Apple's App Store and StoreKit. KeepBack does not receive or store your payment card information.</p>
+    <h3>Children's Privacy</h3>
+    <p>KeepBack is not directed at children under 13 and does not knowingly collect information from children.</p>
 
-<h3>Data Sharing</h3>
-<p>KeepBack does not sell your personal information or purchase information. KeepBack does not share purchase data with advertisers or data brokers.</p>
+    <h3>Contact</h3>
+    <p>Questions about privacy? Email us at <a href="mailto:support@keepback.app" style="color:#1e47b8;">support@keepback.app</a></p>
+  </div>
 
-<h3>Data Deletion</h3>
-<p>You can delete purchase records from the app. Disconnecting Gmail prevents KeepBack from accessing Gmail until you authorize it again.</p>
+  <div class="card">
+    <span class="chip">Terms of Use</span>
+    <h2>Terms of Use</h2>
+    <p class="updated">Last updated: September 2026</p>
 
-<h3>Children</h3>
-<p>KeepBack is not intended for children under 13.</p>
+    <h3>Acceptance</h3>
+    <p>By downloading or using KeepBack, you agree to these terms. If you do not agree, please do not use the app.</p>
 
-<h3>Changes to This Policy</h3>
-<p>This Privacy Policy may be updated from time to time. The latest version will be published on this page.</p>
-</section>
+    <h3>License</h3>
+    <p>KeepBack grants you a limited, non-exclusive, non-transferable license to use the app for personal, non-commercial purposes.</p>
 
-<section>
-<h2>Terms of Use</h2>
+    <h3>Subscriptions</h3>
+    <p>KeepBack Pro is available as a monthly or annual auto-renewable subscription. Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period. You can manage or cancel your subscription in your Apple ID account settings.</p>
 
-<p>By using KeepBack, you agree to these Terms of Use.</p>
+    <h3>Gmail Integration</h3>
+    <p>The Gmail integration is provided as a convenience feature. KeepBack does not guarantee the accuracy of extracted purchase information. Always verify important return deadlines and warranty details with the original merchant.</p>
 
-<h3>Use of the App</h3>
-<p>KeepBack is provided as a tool for organizing purchase information and tracking return and warranty dates. Information extracted from emails may be incomplete or inaccurate. You are responsible for verifying important purchase, return, warranty, and refund information with the merchant.</p>
+    <h3>Disclaimer</h3>
+    <p>KeepBack is provided "as is" without warranties of any kind. We are not responsible for missed return deadlines, incorrect extraction results, or any other indirect damages arising from use of the app.</p>
 
-<h3>Gmail Connection</h3>
-<p>You may optionally connect a Gmail account to allow KeepBack to identify purchase-related messages. You can revoke access through your Google account settings.</p>
+    <h3>Changes</h3>
+    <p>We may update these terms from time to time. Continued use of the app after changes constitutes acceptance of the updated terms.</p>
 
-<h3>Subscriptions</h3>
-<p>KeepBack may offer paid subscription features. Subscriptions are billed through Apple's App Store according to the terms displayed at purchase.</p>
+    <h3>Contact</h3>
+    <p>Questions? Email <a href="mailto:support@keepback.app" style="color:#1e47b8;">support@keepback.app</a></p>
+  </div>
 
-<h3>No Guarantee</h3>
-<p>KeepBack does not guarantee that every purchase, return deadline, warranty, refund, price adjustment, or other information will be detected or displayed correctly.</p>
+</div>
 
-<h3>Availability</h3>
-<p>KeepBack is provided on an "as is" and "as available" basis. Features may change, be interrupted, or become unavailable.</p>
-
-<h3>Contact</h3>
-<p>For questions about KeepBack, contact the developer through the support information provided in the App Store listing.</p>
-
-</section>
+<footer>
+  &copy; 2026 KeepBack &nbsp;·&nbsp; All rights reserved
+</footer>
 
 </body>
 </html>
